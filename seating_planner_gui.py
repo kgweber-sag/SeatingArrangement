@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import json
 import io
 from datetime import datetime
 import tempfile
@@ -150,6 +149,211 @@ def show_excel_guide():
     )
 
 
+def generate_excel(arrangement):
+    """Generate a formatted Excel file with the seating arrangement"""
+    output = io.BytesIO()
+
+    with pd.ExcelWriter(output, engine='openpyxl') as writer:
+        # Summary sheet
+        summary_data = {
+            'Table': ['Head Table'] + [f'Table {i}' for i in range(2, len(arrangement) + 1)],
+            'Number of Guests': [len(table) for table in arrangement]
+        }
+        pd.DataFrame(summary_data).to_excel(writer, sheet_name='Summary', index=False)
+
+        # Head table sheet
+        head_data = pd.DataFrame([
+            {
+                'Name': a.name,
+                'Gender': a.gender,
+                'Seniority': a.seniority,
+                'Field': a.field,
+                'Assigned Head Table': '✓' if a.assign_head_table else ''
+            } for a in arrangement[0]
+        ])
+        head_data.to_excel(writer, sheet_name='Head Table', index=False)
+
+        # Other tables
+        for i, table in enumerate(arrangement[1:], 2):
+            table_data = pd.DataFrame([
+                {
+                    'Name': a.name,
+                    'Gender': a.gender,
+                    'Seniority': a.seniority,
+                    'Field': a.field
+                } for a in table
+            ])
+            table_data.to_excel(writer, sheet_name=f'Table {i}', index=False)
+
+    return output.getvalue()
+
+
+def generate_word_doc(arrangement):
+    """Generate a Word document with the seating arrangement"""
+    from docx import Document
+    from docx.shared import Inches
+
+    doc = Document()
+    doc.add_heading('Seating Arrangement', 0)
+    doc.add_paragraph(f'Generated on: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+
+    # Summary table
+    doc.add_heading('Summary', level=1)
+    table = doc.add_table(rows=1, cols=2)
+    table.style = 'Table Grid'
+    header_cells = table.rows[0].cells
+    header_cells[0].text = 'Table'
+    header_cells[1].text = 'Number of Guests'
+
+    for i, group in enumerate(arrangement):
+        row_cells = table.add_row().cells
+        row_cells[0].text = 'Head Table' if i == 0 else f'Table {i + 1}'
+        row_cells[1].text = str(len(group))
+
+    doc.add_paragraph()
+
+    # Head table
+    doc.add_heading('Head Table', level=1)
+    table = doc.add_table(rows=1, cols=5)
+    table.style = 'Table Grid'
+    header_cells = table.rows[0].cells
+    for i, header in enumerate(['Name', 'Gender', 'Seniority', 'Field', 'Assigned']):
+        header_cells[i].text = header
+
+    for attendee in arrangement[0]:
+        row_cells = table.add_row().cells
+        row_cells[0].text = attendee.name
+        row_cells[1].text = attendee.gender
+        row_cells[2].text = attendee.seniority
+        row_cells[3].text = attendee.field
+        row_cells[4].text = '✓' if attendee.assign_head_table else ''
+
+    # Other tables
+    for i, table_group in enumerate(arrangement[1:], 2):
+        doc.add_paragraph()
+        doc.add_heading(f'Table {i}', level=1)
+        table = doc.add_table(rows=1, cols=4)
+        table.style = 'Table Grid'
+        header_cells = table.rows[0].cells
+        for i, header in enumerate(['Name', 'Gender', 'Seniority', 'Field']):
+            header_cells[i].text = header
+
+        for attendee in table_group:
+            row_cells = table.add_row().cells
+            row_cells[0].text = attendee.name
+            row_cells[1].text = attendee.gender
+            row_cells[2].text = attendee.seniority
+            row_cells[3].text = attendee.field
+
+    output = io.BytesIO()
+    doc.save(output)
+    return output.getvalue()
+
+
+def generate_pdf(arrangement):
+    """Generate a PDF with the seating arrangement"""
+    from reportlab.lib import colors
+    from reportlab.lib.pagesizes import letter
+    from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+
+    output = io.BytesIO()
+    doc = SimpleDocTemplate(output, pagesize=letter)
+    styles = getSampleStyleSheet()
+    elements = []
+
+    # Title
+    elements.append(Paragraph('Seating Arrangement', styles['Title']))
+    elements.append(Paragraph(f'Generated on: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}', styles['Normal']))
+    elements.append(Spacer(1, 12))
+
+    # Summary
+    elements.append(Paragraph('Summary', styles['Heading1']))
+    summary_data = [['Table', 'Number of Guests']]
+    for i, group in enumerate(arrangement):
+        table_name = 'Head Table' if i == 0 else f'Table {i + 1}'
+        summary_data.append([table_name, str(len(group))])
+
+    summary_table = Table(summary_data)
+    summary_table.setStyle(TableStyle([
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 14),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+        ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 1), (-1, -1), 12),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+    ]))
+    elements.append(summary_table)
+    elements.append(Spacer(1, 20))
+
+    # Head table
+    elements.append(Paragraph('Head Table', styles['Heading1']))
+    head_data = [['Name', 'Gender', 'Seniority', 'Field', 'Assigned']]
+    for attendee in arrangement[0]:
+        head_data.append([
+            attendee.name,
+            attendee.gender,
+            attendee.seniority,
+            attendee.field,
+            '✓' if attendee.assign_head_table else ''
+        ])
+
+    head_table = Table(head_data)
+    head_table.setStyle(TableStyle([
+        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 12),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+        ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+    ]))
+    elements.append(head_table)
+    elements.append(Spacer(1, 20))
+
+    # Other tables
+    for i, table_group in enumerate(arrangement[1:], 2):
+        elements.append(Paragraph(f'Table {i}', styles['Heading1']))
+        table_data = [['Name', 'Gender', 'Seniority', 'Field']]
+        for attendee in table_group:
+            table_data.append([
+                attendee.name,
+                attendee.gender,
+                attendee.seniority,
+                attendee.field
+            ])
+
+        group_table = Table(table_data)
+        group_table.setStyle(TableStyle([
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ]))
+        elements.append(group_table)
+        elements.append(Spacer(1, 20))
+
+    doc.build(elements)
+    return output.getvalue()
+
+
+
 def main():
     st.set_page_config(page_title="Seating Arrangement Planner", layout="wide")
 
@@ -235,25 +439,47 @@ def main():
                 if st.session_state.current_arrangement:
                     display_arrangement(st.session_state.current_arrangement)
 
-                    # Action buttons for current arrangement
-                    col1, col2, col3 = st.columns(3)
+                    # First show the approval section
+                    st.write("### Approve Arrangement")
+                    if st.button("Approve & Save to History"):
+                        st.session_state.history.save_arrangement(st.session_state.current_arrangement)
+                        st.success("Arrangement saved to history!")
+
+                    # Then show export options
+                    st.write("### Export Options")
+                    col1, col2, col3, col4 = st.columns(4)
 
                     with col1:
-                        if st.button("Approve & Save"):
-                            st.session_state.history.save_arrangement(st.session_state.current_arrangement)
-                            st.success("Arrangement saved to history!")
+                        if st.button("Export to Excel"):
+                            excel_bytes = generate_excel(st.session_state.current_arrangement)
+                            st.download_button(
+                                "Download Excel File",
+                                excel_bytes,
+                                file_name="seating_arrangement.xlsx",
+                                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                            )
 
                     with col2:
-                        if st.button("Export to Markdown"):
-                            md_content = generate_markdown(st.session_state.current_arrangement)
+                        if st.button("Export to Word"):
+                            word_bytes = generate_word_doc(st.session_state.current_arrangement)
                             st.download_button(
-                                "Download Markdown",
-                                md_content,
-                                file_name="seating_arrangement.md",
-                                mime="text/markdown"
+                                "Download Word Document",
+                                word_bytes,
+                                file_name="seating_arrangement.docx",
+                                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                             )
 
                     with col3:
+                        if st.button("Export to PDF"):
+                            pdf_bytes = generate_pdf(st.session_state.current_arrangement)
+                            st.download_button(
+                                "Download PDF",
+                                pdf_bytes,
+                                file_name="seating_arrangement.pdf",
+                                mime="application/pdf"
+                            )
+
+                    with col4:
                         if st.session_state.history and st.session_state.history.filename:
                             st.download_button(
                                 "Download History",
