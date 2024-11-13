@@ -1,0 +1,889 @@
+[
+  {
+    "date": "2024-11-11T16:30:37.060010",
+    "arrangement": [
+      [
+        {
+          "name": "Ms. Taylor",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "Chemistry"
+        },
+        {
+          "name": "Dr. Anderson",
+          "gender": "M",
+          "seniority": "senior",
+          "field": "Computer Science"
+        },
+        {
+          "name": "Dr. Johnson",
+          "gender": "M",
+          "seniority": "senior",
+          "field": "Biology"
+        },
+        {
+          "name": "Dr. Lee",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Mathematics"
+        },
+        {
+          "name": "Mr. Brown",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Physics"
+        }
+      ],
+      [
+        {
+          "name": "Mr. Martinez",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Mathematics"
+        },
+        {
+          "name": "Dr. Garcia",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Chemistry"
+        },
+        {
+          "name": "Dr. Smith",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Physics"
+        },
+        {
+          "name": "Mr. Wilson",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Biology"
+        },
+        {
+          "name": "Ms. Chen",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "Computer Science"
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-11T20:51:17.810505",
+    "arrangement": [
+      [
+        {
+          "name": "Mike Solomon (director)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "David Gerdes (chair)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "Mo Torres",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": true
+        },
+        {
+          "name": "Mina Magda",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Natalie Hofmeister",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Zoe Berman",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Anne Kort",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Elizabeth Durham",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ismael Biyashev",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Alford Young, Jr.",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kevin Quinn",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lukasz Stanek",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Petra Kuppers",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Trivellore Raghunathan",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Supryia Nair",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Elizabeth Armstrong",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Julio Villa-Palomino",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kyle Whyte",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "James Boyko",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kentaro Toyama",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Felix Warneken",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lisa Nevett",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dina Mahmoud",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Artemis Leontis",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Gaurav Desai",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Benedicte Boisseron",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Robert Ziff",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ifeolu David",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Catherine Badgley",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Charles Burant",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Henry Stoll",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Sungwon Park",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-11T21:11:36.706192",
+    "arrangement": [
+      [
+        {
+          "name": "Dr. Smith",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Physics",
+          "assign_head_table": true
+        },
+        {
+          "name": "Dr. Johnson",
+          "gender": "M",
+          "seniority": "senior",
+          "field": "Biology",
+          "assign_head_table": true
+        },
+        {
+          "name": "Ms. Taylor",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "Chemistry",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ms. Chen",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "Computer Science",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Ms. Lopez",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "Biology",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dr. White",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Physics",
+          "assign_head_table": false
+        },
+        {
+          "name": "Mr. Martinez",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Mathematics",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dr. Anderson",
+          "gender": "M",
+          "seniority": "senior",
+          "field": "Computer Science",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Dr. Garcia",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Chemistry",
+          "assign_head_table": false
+        },
+        {
+          "name": "Mr. Wilson",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Biology",
+          "assign_head_table": false
+        },
+        {
+          "name": "Mr. Brown",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "Physics",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dr. Lee",
+          "gender": "F",
+          "seniority": "senior",
+          "field": "Mathematics",
+          "assign_head_table": false
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-11T21:15:52.714173",
+    "arrangement": [
+      [
+        {
+          "name": "Mike Solomon (director)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "David Gerdes (chair)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "Mo Torres",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": true
+        },
+        {
+          "name": "Petra Kuppers",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Gaurav Desai",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "James Boyko",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Zoe Berman",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ismael Biyashev",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Supryia Nair",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lisa Nevett",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Ifeolu David",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Anne Kort",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Benedicte Boisseron",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kyle Whyte",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kevin Quinn",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Catherine Badgley",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Natalie Hofmeister",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dina Mahmoud",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Sungwon Park",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Julio Villa-Palomino",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kentaro Toyama",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Alford Young, Jr.",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Elizabeth Armstrong",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Artemis Leontis",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Felix Warneken",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lukasz Stanek",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Trivellore Raghunathan",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Mina Magda",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Elizabeth Durham",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Charles Burant",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Henry Stoll",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Robert Ziff",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2024-11-11T21:24:56.750060",
+    "arrangement": [
+      [
+        {
+          "name": "Mike Solomon (director)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "David Gerdes (chair)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "Mo Torres",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": true
+        },
+        {
+          "name": "Anne Kort",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Trivellore Raghunathan",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lisa Nevett",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Catherine Badgley",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lukasz Stanek",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Julio Villa-Palomino",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Alford Young, Jr.",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Mina Magda",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Henry Stoll",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Elizabeth Durham",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kyle Whyte",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Zoe Berman",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Felix Warneken",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "James Boyko",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Supryia Nair",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dina Mahmoud",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Gaurav Desai",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Natalie Hofmeister",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kevin Quinn",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Robert Ziff",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ismael Biyashev",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Elizabeth Armstrong",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kentaro Toyama",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Benedicte Boisseron",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Petra Kuppers",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Artemis Leontis",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Charles Burant",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Sungwon Park",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ifeolu David",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ]
+    ]
+  }
+]
