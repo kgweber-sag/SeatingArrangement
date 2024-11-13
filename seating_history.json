@@ -885,5 +885,246 @@
         }
       ]
     ]
+  },
+  {
+    "date": "2024-11-13T13:17:54.010349",
+    "arrangement": [
+      [
+        {
+          "name": "Mike Solomon (director)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "David Gerdes (chair)",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": true
+        },
+        {
+          "name": "Mo Torres",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": true
+        },
+        {
+          "name": "Kentaro Toyama",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Sungwon Park",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Supryia Nair",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Mina Magda",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Felix Warneken",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Robert Ziff",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Zoe Berman",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Catherine Badgley",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Julio Villa-Palomino",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Benedicte Boisseron",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Henry Stoll",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Petra Kuppers",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Trivellore Raghunathan",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kevin Quinn",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Ifeolu David",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Gaurav Desai",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lisa Nevett",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Elizabeth Armstrong",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Kyle Whyte",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Alford Young, Jr.",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Anne Kort",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Lukasz Stanek",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Dina Mahmoud",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Ismael Biyashev",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "IV",
+          "assign_head_table": false
+        }
+      ],
+      [
+        {
+          "name": "Elizabeth Durham",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "III",
+          "assign_head_table": false
+        },
+        {
+          "name": "Charles Burant",
+          "gender": "M",
+          "seniority": "senior ",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "Artemis Leontis",
+          "gender": "F",
+          "seniority": "senior ",
+          "field": "IV",
+          "assign_head_table": false
+        },
+        {
+          "name": "Natalie Hofmeister",
+          "gender": "F",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        },
+        {
+          "name": "James Boyko",
+          "gender": "M",
+          "seniority": "junior",
+          "field": "I/II",
+          "assign_head_table": false
+        }
+      ]
+    ]
   }
 ]

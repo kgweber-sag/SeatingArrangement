@@ -30,6 +30,18 @@ class TableConstraints:
         if self.min_seats < 2:
             raise ValueError("Minimum seats must be at least 2")
 
+def Attendees_from_spreadsheet(excelfile):
+    try:
+        df = pd.read_excel(excelfile)
+        df_attending = df[df.attending == 'Y']
+        attendees = []
+        for ind, row in df_attending.iterrows():
+            head_table = True if row['head table']==1.0 else False
+            attendees.append(Attendee(row['name'], row['gender'], row['seniority'],
+                                      row['division'], assign_head_table=head_table))
+        return attendees
+    except FileNotFoundError:
+        return []
 
 class SeatingHistory:
     def __init__(self, filename: str = "seating_history.json", memory_events: int = 3):
@@ -297,43 +309,4 @@ def Attendees_from_spreadsheet(excelfile):
         return attendees
     except FileNotFoundError:
         return []
-def main():
-    # Initialize with table size constraints
-    TABLESIZE = 6
-    constraints = TableConstraints(min_seats=4, max_seats=TABLESIZE)
-    history = SeatingHistory(memory_events=3)
-    optimizer = SeatingOptimizer(constraints=constraints, history=history)
 
-    # Create sample attendees
- #   attendees = [
- #       Attendee("Dr. Smith", "F", "senior", "Physics", assign_head_table=True),
- #       Attendee("Dr. Johnson", "M", "senior", "Biology", assign_head_table=True),
- #       Attendee("Ms. Chen", "F", "junior", "Computer Science"),
- #       Attendee("Mr. Brown", "M", "junior", "Physics"),
- #       Attendee("Dr. Garcia", "F", "senior", "Chemistry"),
- #       Attendee("Mr. Wilson", "M", "junior", "Biology"),
- #       Attendee("Dr. Lee", "F", "senior", "Mathematics"),
- #       Attendee("Ms. Taylor", "F", "junior", "Chemistry"),
- #       Attendee("Dr. Anderson", "M", "senior", "Computer Science"),
- #       Attendee("Mr. Martinez", "M", "junior", "Mathematics"),
- #       Attendee("Dr. White", "F", "senior", "Physics"),
- #       Attendee("Ms. Lopez", "F", "junior", "Biology")
- #   ]
-
-    attendees = Attendees_from_spreadsheet('MSF_2024-25.xlsx')
-
-    # Generate optimal seating arrangement
-    Nguests = len(attendees)
-    Ntables = int(Nguests/TABLESIZE + 0.5)
-    arrangement = optimizer.optimize_seating(attendees, num_tables=Ntables+1)
-
-    # Print the results
-    print("\nOptimal Seating Arrangement:")
-    print_seating_arrangement(arrangement, history)
-
-    # Save this arrangement to history
-    history.save_arrangement(arrangement)
-
-
-if __name__ == "__main__":
-    main()
