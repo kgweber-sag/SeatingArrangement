@@ -358,7 +358,7 @@ def main():
     st.set_page_config(page_title="Seating Arrangement Planner", layout="wide")
 
     # Create tabs
-    tab1, tab2 = st.tabs(["Seating Planner", "File Format Guide"])
+    tab1, tab2 = st.tabs(["Seating Planner", "Attendee Excel File Format Guide"])
 
     with tab1:
         st.title("Seating Arrangement Planner")
@@ -402,7 +402,6 @@ def main():
 
             # Action buttons
             generate_button = st.button("Generate New Arrangement")
-            regenerate_button = st.button("Regenerate")
 
         # Main content area
         if excel_file:
@@ -427,7 +426,7 @@ def main():
                     )
 
                 # Generate new arrangement if requested
-                if generate_button or regenerate_button or st.session_state.current_arrangement is None:
+                if generate_button or st.session_state.current_arrangement is None:
                     attendees = Attendees_from_spreadsheet(excel_file)
 
                     st.session_state.current_arrangement = st.session_state.optimizer.optimize_seating(
